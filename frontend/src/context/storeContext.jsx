@@ -446,7 +446,7 @@ const StoreContextProvider = (props) => {
     </StoreContext.Provider>
   );
 };
-//export default have to do 
+//export default have to do  for providing storecontextprovider
 export default StoreContextProvider;
 
 
