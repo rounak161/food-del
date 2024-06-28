@@ -1,0 +1,147 @@
+/* .add{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+.add form{
+ gap:20px
+}
+.add-img-upload img{
+ width: 120px;
+}
+.add-product-name,.add-product-description{
+ width: max(40%,280px);
+}
+.add-product-name input,.add-product-description textarea{
+    padding: 10px;
+}
+.add-catgory-price{
+    display: flex;
+    gap:30px;
+}
+.add-catgory-price select,.add-catgory-price input{
+      max-width: 120px;
+      padding:10px;
+    
+}
+.add-btn{
+    max-width:120px;
+    border:none;
+    padding:10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+} */
+
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .add-img-upload {
+    align-items: center;
+  }
+  
+  .add-img-upload p {
+    margin-bottom: 10px;
+    color: #d9534f; /* Tomato color */
+    font-weight: bold;
+  }
+  
+  .add-img-upload label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #d9534f; /* Tomato color */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 200px;
+    color: #d9534f;
+  }
+  
+  .add-img-upload label img {
+    max-width: 100%;
+  }
+  
+  .add-product-name p,
+  .add-product-description p,
+  .add-category p,
+  .add-price p {
+    margin-bottom: 5px;
+    color: #d9534f; /* Tomato color */
+    font-weight: bold;
+  }
+  
+  .add-product-name input,
+  .add-product-description textarea,
+  .add-category select,
+  .add-price input {
+    padding: 10px;
+    border: 1px solid #d9534f; /* Tomato border color */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .add-product-name input:focus,
+  .add-product-description textarea:focus,
+  .add-category select:focus,
+  .add-price input:focus {
+    border-color: #d9534f; /* Tomato border color on focus */
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5); /* Tomato color shadow on focus */
+  }
+  
+  .add-product-description textarea {
+    resize: none;
+  }
+  
+  .add-catgory-price {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .add-category,
+  .add-price {
+    flex: 1;
+  }
+  
+  .add-category {
+    margin-right: 10px;
+  }
+  
+  .add-btn {
+    background: #d9534f; /* Tomato background color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-btn:hover {
+    background: #c9302c; /* Darker tomato background color on hover */
+  }
+  
