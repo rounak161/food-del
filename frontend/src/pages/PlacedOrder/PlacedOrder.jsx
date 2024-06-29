@@ -6,7 +6,7 @@ import { StoreContext } from '../../context/storeContext';
  
 const PlacedOrder = () => {
 
-  //creating for  the placing an 
+  //creating for  the placing an  order
   const {getTotalCartAmount } = useContext(StoreContext);
   return (
    <form className='place-order'>
