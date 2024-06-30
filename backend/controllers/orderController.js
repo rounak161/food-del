@@ -58,7 +58,7 @@
 
 
 
-import orderModel from "../model/orderModel";
+import orderModel from "../model/orderModel.js";
 import userModel from "../model/userModel.js";
 
 import { Stripe } from 'stripe';
@@ -72,6 +72,7 @@ const placeOrder = async (req, res) => {
       userId: req.body.userId,
       items: req.body.items,
       amount: req.body.amount, // Corrected from req.body.address to req.body.amount
+      address: req.body.address,
     });
     await newOrder.save();
     await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
@@ -112,4 +113,20 @@ const placeOrder = async (req, res) => {
   }
 };
 
-export { placeOrder };
+const verifyOrder = async (req, res) => {
+  const { orderId, success } = req.body;
+  try {
+    if (success === "true") {
+      await orderModel.findByIdAndUpdate(orderId, { payment: true });
+      res.json({ success: true, message: "Paid" });
+    } else {
+      await orderModel.findByIdAndDelete(orderId); // Added 'orderModel.'
+      res.json({ success: false, message: "Not Paid" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+export { placeOrder ,verifyOrder};
