@@ -187,6 +187,5 @@ export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
 //     res.json({ success: true, data: orders });
 //   } catch (error) {
 //     console.error("Error fetching user orders:", error);
-//     res.json({ success: false, message: "Error fetching orders" });
-//   }
+ 
  
