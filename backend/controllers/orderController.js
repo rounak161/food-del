@@ -186,6 +186,4 @@ export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
 //     const orders = await orderModel.find({ userId: req.body.userId });
 //     res.json({ success: true, data: orders });
 //   } catch (error) {
-//     console.error("Error fetching user orders:", error);
- 
  
