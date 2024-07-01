@@ -178,3 +178,15 @@ const updateStatus = async (req, res) => {
 };
 
 export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
+
+
+//user orders for frontend
+// const userOrders = async (req, res) => {
+//   try {
+//     const orders = await orderModel.find({ userId: req.body.userId });
+//     res.json({ success: true, data: orders });
+//   } catch (error) {
+//     console.error("Error fetching user orders:", error);
+//     res.json({ success: false, message: "Error fetching orders" });
+//   }
+// };
