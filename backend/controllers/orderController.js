@@ -180,7 +180,4 @@ const updateStatus = async (req, res) => {
 export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
 
 
-//user orders for frontend
-// const userOrders = async (req, res) => {
-//   try {
-
+ 
