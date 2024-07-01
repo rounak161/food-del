@@ -184,6 +184,6 @@ export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
 // const userOrders = async (req, res) => {
 //   try {
 //     const orders = await orderModel.find({ userId: req.body.userId });
-//     res.json({ success: true, data: orders });
-//   } catch (error) {
+ 
+ 
  
