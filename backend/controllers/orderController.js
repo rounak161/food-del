@@ -183,7 +183,4 @@ export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
 //user orders for frontend
 // const userOrders = async (req, res) => {
 //   try {
-//     const orders = await orderModel.find({ userId: req.body.userId });
- 
- 
- 
+
