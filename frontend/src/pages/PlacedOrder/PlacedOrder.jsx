@@ -4,7 +4,7 @@ import './PlacedOrder.css'
 import React from 'react'
 import { StoreContext } from '../../context/storeContext';
 import axios from 'axios';
- 
+import {useNavigate} from 'react-router-dom'
 const PlacedOrder = () => {
 
   //creating for  the placing an  order
@@ -52,6 +52,15 @@ const PlacedOrder = () => {
       alert("Error")
      }
   }
+  const navigate= useNavigate();
+  useEffect(()=>{
+    if(!token){
+     navigate('/cart')
+    }
+    else if(getTotalCartAmount()===0){
+      navigate('/cart')
+    }
+  },[token])
   // useEffect(()=>{
   //   console.log(data)
   // },[data])

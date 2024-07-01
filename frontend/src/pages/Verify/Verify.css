@@ -1,1 +1,39 @@
- 
+ /* .verify{
+    min-height: 60vh;
+    display: grid;
+ }
+ .verify .spinner{
+    width: 100px;
+    height:100px;
+    place-self: center;
+    border:5px solid #bdbdbd;
+    border-top-color: tomato;
+    animation: rotate is infinite;
+ }
+ @keyframes rotate{
+    100%{
+        transform:rotate(360deg);
+    }
+ } */
+
+ .verify {
+    min-height: 60vh;
+    display: grid;
+  }
+  
+  .verify .spinner {
+    width: 100px;
+    height: 100px;
+    place-self: center;
+    border: 5px solid #bdbdbd;
+    border-top-color: tomato;
+    border-radius: 50%; /* This makes it circular */
+    animation: rotate 1s infinite linear; /* Added duration and linear timing */
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

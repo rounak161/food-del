@@ -129,4 +129,52 @@ const verifyOrder = async (req, res) => {
   }
 };
 
-export { placeOrder ,verifyOrder};
+//user orders for frontend
+// const userOrders = async (req, res) => {
+//   try {
+//     const orders = await orderModel.find({ userId: req.body.userId });
+//     res.json({ success: true, data: orders });
+//   } catch (error) {
+//     console.error("Error fetching user orders:", error);
+//     res.json({ success: false, message: "Error fetching orders" });
+//   }
+// };
+
+// user orders for frontend
+const userOrders = async (req, res) => {
+  try {
+    console.log("Received request to fetch user orders:", req.body);  // Debugging line
+    const orders = await orderModel.find({ userId: req.body.userId });
+    console.log("Fetched orders:", orders);  // Debugging line
+    res.json({ success: true, data: orders });
+  } catch (error) {
+    console.error("Error fetching user orders:", error);
+    res.json({ success: false, message: "Error fetching orders" });
+  }
+};
+
+
+//lising orders for admin panel
+const listOrders=async(req,res)=>{
+        try{
+            const orders=await orderModel.find({});
+            res.json({success:true,data:orders})
+        }catch(error){
+           console.log(error)
+           res.json({success:false,message:"Error"})
+        }
+}
+
+//api for updating order status 
+const updateStatus = async (req, res) => {
+  try {
+    await orderModel.findByIdAndUpdate(req.body.orderId, { status: req.body.status });
+    console.log({ success: true, message: "Status Updated" });
+    res.json({ success: true, message: "Status Updated" }); // Add this line
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" }); // Corrected typo
+  }
+};
+
+export { placeOrder ,verifyOrder,userOrders,listOrders,updateStatus};
