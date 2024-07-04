@@ -349,9 +349,7 @@
 
 // export default StoreContextProvider;
 
- 
 
- 
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -369,7 +367,7 @@ const StoreContextProvider = (props) => {
       await axios.post(url + 'api/cart/add', { itemId }, { headers: { token } });
     }
   };
-
+  
   const removeFromCart = async (itemId) => {
     setCartItems((prev = {}) => {
       const updatedItems = { ...prev, [itemId]: (prev[itemId] || 1) - 1 };
