@@ -123,7 +123,7 @@ const LoginPopup = ({ setShowLogin }) => {
       toast.error('An error occurred while processing your request. Please try again.');
     }
   };
-
+  
   return (
     <div className='login-popup'>
       <form onSubmit={onLogin} className='login-popup-container'>

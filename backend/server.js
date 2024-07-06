@@ -35,9 +35,7 @@
 // // Start the server
 // app.listen(port, () => {
 //   console.log(
-//     `Server Running on port ${port}`.bgCyan.white
-//   );
-// });
+ 
 
 
 import express from "express";
@@ -84,3 +82,22 @@ app.use('/api/order',orderRouter)
 app.listen(port, () => {
   console.log(`Server Running on port ${port}`.bgCyan.white);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
