@@ -24,10 +24,7 @@
 // // Routes
 // app.get("/", (req, res) => {
 //   res.send("API is working");
-// });
-
-
-// //api end point 
+ 
  
  
  
