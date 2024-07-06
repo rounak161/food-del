@@ -28,11 +28,7 @@
 
 
 // //api end point 
-// app.use("/api/food",foodRouter);
-
-
-
-// // Start the server
+ 
  
  
 
