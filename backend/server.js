@@ -9,11 +9,7 @@
 // dotenv.config();
 
 // // Connect to the database
-// connectDB();
-
  
-
-// // App configuration
  
  
  
