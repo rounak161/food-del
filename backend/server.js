@@ -4,11 +4,6 @@
 // import colors from "colors";
 // import connectDB from "./config/db.js"; // Correct import for default export
 // import foodRouter from "./routes/foodRoute.js";
-
-// // Load environment variables
-// dotenv.config();
-
-// // Connect to the database
  
  
  
